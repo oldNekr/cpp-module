@@ -84,6 +84,6 @@ void Account::_displayTimestamp() {
 	tm *_localTime = localtime(&_time);
 	char _strTime[100];
 
-	std::strftime(_strTime, sizeof(_strTime), "[%Y%m%d_%H%M%S]", _localTime);
+	std::strftime(_strTime, sizeof(_strTime), "[%Y%m%d_%H%M%S] ", _localTime);
 	std::cout << _strTime;
 }

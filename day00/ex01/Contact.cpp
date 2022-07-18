@@ -9,8 +9,8 @@ Contact::~Contact() {
 }
 
 std::string Contact::_dataNames[5] = {
-		"First name: ",
-		"Last name: ",
+		"First _name: ",
+		"Last _name: ",
 		"Nickname: ",
 		"Phone number: ",
 		"Darkest secret: "

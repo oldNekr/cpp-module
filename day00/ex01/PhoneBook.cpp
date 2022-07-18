@@ -46,16 +46,17 @@ bool PhoneBook::searchContact() const {
 	else {
 		std::cout << "Enter the number from 1 to " << this->_count << std::endl;
 		std::cout << "The contact #";
-		for (getline(std::cin, tmp), index = atoi(tmp.c_str()); index < 1 || index > (int )this->_count;
-				getline(std::cin, tmp)) {
-			if (std::cin.eof())
-				return false;
-			else if (!(index > 0 && index < 9)) {
-				std::cout << "Only numbers from 1 to 8 are accepted, try again" << std::endl;
-				return true;
-			}
+		getline(std::cin, tmp);
+		index = atoi(tmp.c_str());
+		if (std::cin.eof())
+			return false;
+		else if (!(index > 0 && index < 9)) {
+			std::cout << "Only numbers from 1 to 8 are accepted, try again" << std::endl;
+			return true;
+
+		} else {
 			std::cout << "PhoneBook has " << this->_count << " Contacts" << std::endl;
-			std::cout << "The contact #" << std::endl;
+			return true;
 		}
 	}
 	this->_contact[index - 1].getData();
