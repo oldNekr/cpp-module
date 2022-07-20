@@ -3,3 +3,15 @@
 //
 
 #include "HumanA.hpp"
+
+HumanA::HumanA(std::string const &name, Weapon const &gun) : _name(name), _gun(gun){
+
+}
+
+HumanA::~HumanA() {
+	std::cout << "Died" << std::endl;
+}
+
+void HumanA::attack() const {
+	std::cout << this->_name << " Attacks using " << this->_gun.getType() << std::endl;
+}

@@ -12,7 +12,7 @@ CPP_FLAG	= -std=c++98
 OPT_FLAG	= -O2
 RM			= rm -rf
 
-NAME = Human-no-homo
+NAME = Humans-takes-guns
 HDRS_LIST = HumanA HumanB Weapon
 SRCS_LIST = main HumanA HumanB Weapon
 
