@@ -9,7 +9,7 @@ HumanA::HumanA(std::string const &name, Weapon const &gun) : _name(name), _gun(g
 }
 
 HumanA::~HumanA() {
-	std::cout << "Died" << std::endl;
+	std::cout << std::endl;
 }
 
 void HumanA::attack() const {

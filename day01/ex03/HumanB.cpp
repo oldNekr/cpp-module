@@ -9,7 +9,7 @@ HumanB::HumanB(std::string const &name) : _name(name), _gun(nullptr) {
 }
 
 HumanB::~HumanB() {
-	std::cout << "Died" << std::endl;
+
 }
 
 void HumanB::setWeapon(Weapon const  &gun) {

@@ -4,8 +4,6 @@
 
 #include "Weapon.hpp"
 
-#include <utility>
-
 Weapon::Weapon(std::string const &type) : _type(type) {
 
 }
