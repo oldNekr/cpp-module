@@ -37,8 +37,8 @@ void Replacer::replace(const std::string &filename, const std::string &s1, const
 		while (true) {
 			found = buffer.find(s1); // находит позицию строки s1
 			if (found != std::string::npos) {
-				buffer.erase(found, s1.length()); // удаляется первая подстрока в буфере
-				buffer.insert(found, s2); //заменяется на вторую строку
+				buffer.erase(found, s1.length()); // удаление
+				buffer.insert(found, s2); //замена
 			} else
 				break;
 		}
