@@ -3,10 +3,6 @@
 //
 
 #include "ClapTrap.hpp"
-#include "../ex01/ClapTrap.hpp"
-
-#include <utility>
-
 
 ClapTrap::ClapTrap(std::string name) : _hitPoints(10), _energyPoints(10), _attackDamage(0) {
     this->_name = name;
@@ -19,6 +15,11 @@ ClapTrap::ClapTrap(const ClapTrap &src) {
     this->_energyPoints = src.getNum("_energyPoints");
     this->_attackDamage = src.getNum("_attackDamage");
     std::cout << this->_name << ": copy constructor called." << std::endl;
+}
+
+ClapTrap::ClapTrap(std::string name, unsigned int hp, unsigned int energy, unsigned int dmg)
+    : _hitPoints(hp), _energyPoints(energy), _attackDamage(dmg) {
+    this->_name = name;
 }
 
 ClapTrap & ClapTrap::operator=(const ClapTrap &src) {

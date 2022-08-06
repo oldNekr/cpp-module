@@ -14,6 +14,8 @@ private:
     unsigned int _energyPoints;
     unsigned int _attackDamage;
 
+    ClapTrap(std::string name, unsigned int hp, unsigned int energy,  unsigned int dmg);
+
 public:
 	ClapTrap(std::string name);
 	ClapTrap(ClapTrap const &src);
