@@ -8,7 +8,8 @@ int main() {
     ClapTrap frame1("Excalibur");
     ClapTrap frame2("Volt");
     ClapTrap frame3("Mag");
-    ClapTrap whippingBoy("Grineer");
+    ClapTrap enemy1("Grineer");
+    ClapTrap enemy2("Corpus");
     std::cout << std::endl;
 
     ClapTrap copy1(frame1);
@@ -17,7 +18,7 @@ int main() {
     std::cout << std::endl;
 
     std::cout << frame1;
-    frame1.attack(whippingBoy.getName());
+    frame1.attack(enemy1.getName());
     std::cout << frame1 << std::endl;
 
     std::cout << frame2;
@@ -27,14 +28,14 @@ int main() {
     std::cout << frame3;
     frame3.takeDamage(11);
     std::cout << frame3;
-    frame3.attack("Corpus");
+    frame3.attack(enemy2.getName());
     frame3.beRepaired(10);
     std::cout << std::endl;
 
     std::cout << frame1;
     for (int it = 1; frame1.getNum("_energyPoints") > 4;) {
         std::cout << it++ << ". ";
-        frame1.attack(whippingBoy.getName());
+        frame1.attack(enemy1.getName());
     }
     std::cout << frame1;
     for (int it = 1; frame1.getNum("_energyPoints");) {
@@ -42,7 +43,7 @@ int main() {
         frame1.beRepaired(5);
     }
     std::cout << frame1;
-    frame1.attack("Corpus");
+    frame1.attack(enemy2.getName());
     frame1.beRepaired(1);
     std::cout  << std::endl;
 

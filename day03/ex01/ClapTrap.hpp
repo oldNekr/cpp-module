@@ -8,13 +8,13 @@
 #include <iostream>
 
 class ClapTrap {
-private:
+protected:
 	std::string _name;
 	unsigned int _hitPoints;
     unsigned int _energyPoints;
     unsigned int _attackDamage;
 
-    ClapTrap(std::string name, unsigned int hp, unsigned int energy,  unsigned int dmg);
+    ClapTrap(std::string name, unsigned int hp, unsigned int energy, unsigned int dmg);
 
 public:
 	ClapTrap(std::string name);

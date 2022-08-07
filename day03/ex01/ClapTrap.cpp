@@ -4,8 +4,7 @@
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(std::string name) : _hitPoints(10), _energyPoints(10), _attackDamage(0) {
-    this->_name = name;
+ClapTrap::ClapTrap(std::string name) :_name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0) {
     std::cout << this->_name << ": default constructor called." << std::endl;
 }
 
@@ -18,8 +17,8 @@ ClapTrap::ClapTrap(const ClapTrap &src) {
 }
 
 ClapTrap::ClapTrap(std::string name, unsigned int hp, unsigned int energy, unsigned int dmg)
-    : _hitPoints(hp), _energyPoints(energy), _attackDamage(dmg) {
-    this->_name = name;
+        :_name(name), _hitPoints(hp), _energyPoints(energy), _attackDamage(dmg) {
+    std::cout << this->_name << ": ClapTrap full constructor called" << std::endl;
 }
 
 ClapTrap & ClapTrap::operator=(const ClapTrap &src) {
