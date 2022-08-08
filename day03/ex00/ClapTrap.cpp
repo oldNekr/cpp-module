@@ -3,7 +3,6 @@
 //
 
 #include "ClapTrap.hpp"
-#include "../ex01/ClapTrap.hpp"
 
 #include <utility>
 

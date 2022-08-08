@@ -12,9 +12,9 @@ CPP_FLAG	= -std=c++98
 OPT_FLAG	= -O2
 RM			= rm -rf
 
-NAME = ScavTrap
-HDRS_LIST = ClapTrap ScavTrap
-SRCS_LIST = main ClapTrap ScavTrap
+NAME = FragTrap
+HDRS_LIST = ClapTrap ScavTrap FragTrap
+SRCS_LIST = main ClapTrap ScavTrap FragTrap
 
 SRC = $(addsuffix .cpp, $(SRCS_LIST)) \
 

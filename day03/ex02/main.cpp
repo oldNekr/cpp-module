@@ -2,12 +2,13 @@
 // Created by Lauri Rosby on 8/5/22.
 //
 
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main() {
     ClapTrap frame1("Excalibur");
     ScavTrap frame2("Volt");
-    ClapTrap enemy1("Grineer");
+	FragTrap frame3("Mag");
+	ClapTrap enemy1("Grineer");
 	ClapTrap enemy2("Corpus");
 	std::cout << std::endl;
 
@@ -24,13 +25,16 @@ int main() {
 	frame2.guardingGate();
 	std::cout << std::endl;
 
+	frame3.highFivesGuys();
+	std::cout << std::endl;
+
 	ScavTrap copyFrame(frame2);
 	std::cout << "Copy " << copyFrame << std::endl;
 
-	ScavTrap frame3("Mag");
-	std::cout << frame3;
-	frame3 = frame2;
-	std::cout << "Equal " << frame3 << std::endl;
+	ScavTrap chel("Tenno");
+	std::cout << chel;
+	chel = frame2;
+	std::cout << "Equal " << chel << std::endl;
 
     return EXIT_SUCCESS;
 }
