@@ -13,8 +13,8 @@ OPT_FLAG	= -O2
 RM			= rm -rf
 
 NAME = Bureaucrat
-HDRS_LIST = Animal Cat Dog WrongAnimal WrongCat
-SRCS_LIST = main Animal Cat Dog WrongAnimal WrongCat
+HDRS_LIST = Bureaucrat
+SRCS_LIST = main Bureaucrat
 
 SRC = $(addsuffix .cpp, $(SRCS_LIST)) \
 
