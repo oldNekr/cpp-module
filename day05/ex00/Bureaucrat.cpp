@@ -18,6 +18,17 @@ Bureaucrat::Bureaucrat(const Bureaucrat &src) : _name(src.getName()), _grade(src
         throw (Bureaucrat::GradeTooHighException());
 }
 
+Bureaucrat &Bureaucrat::operator=(Bureaucrat const &src) {
+    this->_grade = src.getGrade();
+
+    if (_grade > 150)
+        throw (Bureaucrat::GradeTooLowException());
+    if (_grade < 1)
+        throw (Bureaucrat::GradeTooHighException());
+
+    return *this;
+}
+
 Bureaucrat::~Bureaucrat() {}
 
 const char *Bureaucrat::GradeTooHighException::what() const throw() {
